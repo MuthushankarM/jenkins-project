@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         maven '3.9.11'   // must match EXACT name you used in Maven installation
-        jdk 'C:\Program Files\Java\jdk-21'  // must match EXACT name you used for JDK
+        jdk 'jdk-21'  // must match EXACT name you used for JDK
     }
 
     stages {
