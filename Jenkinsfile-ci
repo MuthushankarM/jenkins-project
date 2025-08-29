@@ -1,7 +1,19 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'Maven3.9.11'   // must match the Maven name in Jenkins Global Tool Configuration
+        jdk 'Java17'          // must match the JDK name in Jenkins Global Tool Configuration
+    }
+
     stages {
+        stage('Verify Tools') {
+            steps {
+                bat 'mvn -v'
+                bat 'java -version'
+            }
+        }
+
         stage('Checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/viji-sarvesh/ciexpipeline.git'
