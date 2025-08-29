@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven3.9.11'   // must match the Maven name in Jenkins Global Tool Configuration
-        jdk 'Java17'          // must match the JDK name in Jenkins Global Tool Configuration
+        maven '3.9.11'   // must match EXACT name you used in Maven installation
+        jdk 'C:\Program Files\Java\jdk-21'  // must match EXACT name you used for JDK
     }
 
     stages {
